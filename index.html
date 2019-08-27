@@ -1,0 +1,258 @@
+
+<html>
+
+<script type="text/javascript">
+
+ 
+ function checkForm(form)
+ 
+ {
+
+ if(form.username.value.length < 6)
+ 
+{
+      
+alert("Error: Username must contail atleast 6 characters!");
+      
+form.username.focus();
+      
+return false;
+    
+}
+    
+re = /^\w+$/;
+    
+if(!re.test(form.username.value)) 
+{
+      
+alert("Error: Username must contain only letters, numbers and underscores!");
+      
+form.username.focus();
+      
+return false;
+    
+    
+}
+
+    
+if(form.pwd1.value != "" && form.pwd1.value == form.pwd1.value) 
+{
+      
+if(form.pwd1.value.length < 6) 
+{
+        
+alert("Error: Password must contain at least six characters!");
+        
+form.pwd1.focus();
+        
+return false;
+      
+}
+      
+if(form.pwd1.value==form.username.value) 
+{
+        
+alert("Error: Password must be different from Username!");
+        
+form.pwd1.focus();
+        
+return false;
+      
+}
+      
+re = /[0-9]/;
+      
+if(!re.test(form.pwd1.value)) 
+{
+        
+alert("Error: password must contain at least one number (0-9)!");
+        
+form.pwd1.focus();
+        
+return false;
+     
+}
+      
+re = /[a-z]/;
+      
+if(!re.test(form.pwd1.value)) 
+{
+        
+alert("Error: password must contain at least one lowercase letter (a-z)!");
+        
+form.pwd1.focus();
+        
+return false;
+      
+}
+      
+re = /[A-Z]/;
+      
+if(!re.test(form.pwd1.value)) 
+{
+        
+alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        
+form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+
+   
+    return true;
+  }
+
+</script>
+<style>
+div.loginbox
+{
+height:400px;
+width:400px;
+position:absolute;
+top:20%;
+left:35%;
+}
+img.admin
+{
+position:absolute;
+top:50%;
+left:50%;
+}
+</style>
+
+<body>
+
+ <img src="images\p.png" style="position:absolute;height:650px;width:1400px;left:0px;top:0;">
+
+<div class="loginbox" style="background-color:white; border-radius:10px;">
+<img class="admin" src="images\Admin.png" height="80px" width="80pxs" style="border-radius:50px;position:absolute;top:5px;left:160px;">
+<label style="position:absolute;top:70px;left:145px;"><h3>Admin Login</h3></label>
+<p style="position:absolute;top:90px;left:120px;">sign in to your account</p>
+<form ... onsubmit="return checkForm(this);" action="org.html" method="post" autocomplete=off>
+ <div class="login" style="position:absolute;top:90px;left:70px;"><br>
+<br>
+<br>
+  <input type="text" id="username" name="username" placeholder="username" required style="border-radius:10px;height:30px;width:250px; border-size:5px;background-color:#d9d9d9; color:black;"><br><br>
+ <input type="password" id="pwd1" name="pwd1" placeholder="password" style="border-radius:10px;height:30px;width:250px;background-color:#c2d6d6;"><br>
+<br>
+<input type="checkbox" name="chckbox" style="zoom:2;position:relative;left:0;top:5px;">Remember me  
+<input type="submit" value="Submit" style="background-color:#66ff66;height:3em;width:9em;border-radius:5px;border-style:solid;">
+</div>
+</form>
+<dev class="twitter" style="background-color:red;top:60px;">
+
+</div>
+</dev>
+
+
+</body>
+</html>
+=======
+<html>
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.username.value.length < 6) 
+{
+      alert("Error: Username must contain atleast 6 characters!");
+      form.username.focus();
+      return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.username.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.username.focus();
+      return false;
+    
+    }
+
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd1.value) {
+      if(form.pwd1.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.pwd1.focus();
+        return false;
+      }
+      if(form.pwd1.value == form.username.value) {
+        alert("Error: Password must be different from Username!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.pwd1.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.pwd1.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+
+   
+    return true;
+  }
+
+</script>
+<style>
+div.loginbox
+{
+height:400px;
+width:400px;
+position:absolute;
+top:20%;
+left:35%;
+}
+img.admin
+{
+position:absolute;
+top:50%;
+left:50%;
+}
+</style>
+
+<body>
+
+ <img src="images\p.png" style="position:absolute;height:650px;width:1400px;left:0px;top:0;">
+
+<div class="loginbox" style="background-color:white; border-radius:10px;">
+<img class="admin" src="images\Admin.png" height="80px" width="80pxs" style="border-radius:50px;position:absolute;top:5px;left:160px;">
+<label style="position:absolute;top:70px;left:145px;"><h3>Admin Login</h3></label>
+<p style="position:absolute;top:90px;left:120px;">sign in to your account</p>
+<form ... onsubmit="return checkForm(this);" action="org.html" method="post" autocomplete=off>
+ <div class="login" style="position:absolute;top:90px;left:70px;"><br>
+<br>
+<br>
+  <input type="text" id="username" name="username" placeholder="username" required style="border-radius:10px;height:30px;width:250px; border-size:5px;background-color:#d9d9d9; color:black;"><br><br>
+ <input type="password" id="pwd1" name="pwd1" placeholder="password" style="border-radius:10px;height:30px;width:250px;background-color:#c2d6d6;"><br>
+<br>
+<input type="checkbox" name="chckbox" style="zoom:2;position:relative;left:0;top:5px;">Remember me  
+<input type="submit" value="Submit" style="background-color:#66ff66;height:3em;width:9em;border-radius:5px;border-style:solid;">
+</div>
+</form>
+<dev class="twitter" style="background-color:red;top:60px;">
+
+</div>
+</dev>
+
+
+</body>
+</html>
+
